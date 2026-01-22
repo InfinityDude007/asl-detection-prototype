@@ -13,3 +13,6 @@ venv/
 
 # Landmark data dump
 *.pickle
+
+# Trained model
+*.p
