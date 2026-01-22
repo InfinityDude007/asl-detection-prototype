@@ -10,3 +10,6 @@
 # Environments
 .env
 venv/
+
+# Landmark data dump
+*.pickle
