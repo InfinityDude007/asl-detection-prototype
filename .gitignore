@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# VSCode
+.vscode
+
+# Experimental / testing
+*.ipynb
+
+# Environments
+.env
+venv/
