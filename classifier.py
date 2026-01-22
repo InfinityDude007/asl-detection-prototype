@@ -11,7 +11,7 @@ start_time = time.time()
 
 
 # convert coordinate and label objects into 2d numpy arrays for scikit-learn
-data_dict = pickle.load(open("./data.pickle", "rb"))
+data_dict = pickle.load(open("./artifacts/data.pickle", "rb"))
 data = np.asarray(data_dict["data"])
 labels = np.asarray(data_dict["labels"])
 
@@ -38,7 +38,7 @@ print(f"\n{(score*100):.2f}% of samples were classified correctly")
 
 
 # dump trained model data into file for the inference classifier
-f = open("model.p", "wb")
+f = open("artifacts/model.p", "wb")
 pickle.dump({"model": model}, f)
 f.close()
 

@@ -61,7 +61,7 @@ for dir_path in os.listdir(DATA_DIR):
 
 
 # dumping all data from coordinate and label objects into .pickle file for the model
-f = open("data.pickle", "wb")
+f = open("artifacts/data.pickle", "wb")
 pickle.dump({
     "data": data,
     "labels": labels

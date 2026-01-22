@@ -12,7 +12,7 @@
 venv/
 
 # Landmark data dump
-*.pickle
+artifacts/data.pickle
 
 # Trained model
-*.p
+artifacts/model.p
