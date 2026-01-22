@@ -54,9 +54,10 @@ for dir_path in os.listdir(DATA_DIR):
                     data_aux.append(x)
                     data_aux.append(y)
                 
-            # storing all parsed coordinates and labels
-            data.append(data_aux)
-            labels.append(dir_path)
+            # storing all parsed coordinates and labels with sufficient features (avoids 'inhomogeneous shape' errors with numpy)
+            if (len(data_aux) == 42):
+                data.append(data_aux)
+                labels.append(dir_path)
 
 
 # dumping all data from coordinate and label objects into .pickle file for the model
@@ -69,4 +70,4 @@ f.close()
 
 
 # confirm success and print elapsed time
-print(f"\nDone, time elapsed: {(time.time() - start_time):.2f}s")
+print(f"\nLandmarks created, time elapsed: {(time.time() - start_time):.2f}s\n")
